@@ -11,7 +11,7 @@ const Shirt = () => {
   const { nodes, materials } = useGLTF('https://justlink511.github.io/threeJsProject/cup.glb');
 
   const logoTexture = useTexture(snap.logoDecal);
-  const fullTexture = useTexture(snap.fullDecal);
+  //const fullTexture = useTexture(snap.fullDecal);
 
   useFrame((state, delta) => easing.dampC(materials['Material.001'].color, snap.color, 0.25, delta));
 

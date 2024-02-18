@@ -48,16 +48,17 @@ const Customizer = () => {
     }
   }
 
-  const handleActiveFilterTab = (tabName) => {
+  /*const handleActiveFilterTab = (tabName) => {
     switch (tabName) {
       case "logoShirt":
-          state.isLogoTexture = !activeFilterTab[tabName];
+          state.isLogoTexture = !state.isLogoTexture;
         break;
       default:
         state.isLogoTexture = true;
         state.isFullTexture = false;
         break;
     }
+
 
     // after setting the state, activeFilterTab is updated
 
@@ -67,6 +68,10 @@ const Customizer = () => {
         [tabName]: !prevState[tabName]
       }
     })
+  }*/
+
+  const handleActiveFilterTab = () => {
+    state.isLogoTexture = !state.isLogoTexture;
   }
 
   const readFile = (type) => {
@@ -117,15 +122,13 @@ const Customizer = () => {
             className='filtertabs-container'
             {...slideAnimation("up")}
           >
-            {FilterTabs.map((tab) => (
-              <Tab
-                key={tab.name}
-                tab={tab}
-                isFilterTab
-                isActiveTab={activeFilterTab[tab.name]}
-                handleClick={() => handleActiveFilterTab(tab.name)}
-              />
-            ))}
+
+            <CustomButton 
+              type="filled"
+              title="Afficher le logo"
+              handleClick={() => handleActiveFilterTab()}
+              customStyles=""
+            />
           </motion.div>
         </>
       )}
