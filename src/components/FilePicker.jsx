@@ -13,7 +13,7 @@ const FilePicker = ({ file, setFile, readFile }) => {
           onChange={(e) => setFile(e.target.files[0])}
         />
         <label htmlFor="file-upload" className="filepicker-label">
-          Upload File
+          Déposer un fichier
         </label>
 
         <p className="mt-2 text-gray-500 text-xs truncate">
@@ -26,12 +26,6 @@ const FilePicker = ({ file, setFile, readFile }) => {
           type="outline"
           title="Logo"
           handleClick={() => readFile('logo')}
-          customStyles="text-xs"
-        />
-        <CustomButton 
-          type="filled"
-          title="Full"
-          handleClick={() => readFile('full')}
           customStyles="text-xs"
         />
       </div>
