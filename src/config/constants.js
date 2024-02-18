@@ -16,10 +16,6 @@ export const FilterTabs = [
     name: "logoShirt",
     icon: logoShirt,
   },
-  // {
-  //   name: "stylishShirt",
-  //   icon: stylishShirt,
-  // },
 ];
 
 export const DecalTypes = {
@@ -27,8 +23,4 @@ export const DecalTypes = {
     stateProperty: "logoDecal",
     filterTab: "logoShirt",
   },
-  // full: {
-  //   stateProperty: "fullDecal",
-  //   filterTab: "stylishShirt",
-  // },
 };
